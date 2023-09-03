@@ -1,12 +1,14 @@
 import Login from "./Login"
+import { Suspense } from "react"
+
 export default function Home() {
    
   
 
   
   return (
-    
-<section className="bg-white">
+    <Suspense fallback={<p>Loading feed...</p>}>
+    <section className="bg-white">
   <div className="lg:grid lg:min-h-screen lg:grid-cols-12">
     <section
       className="relative flex h-32 items-end bg-gray-900 lg:col-span-5 lg:h-full xl:col-span-6"
@@ -81,6 +83,9 @@ export default function Home() {
       </div>
     </main>
   </div>
-</section>
+    </section>
+    </Suspense>
+        
+    
   )
 }
