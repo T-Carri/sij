@@ -1,24 +1,14 @@
-
-import { useState } from "react"
-import { ButtonForm } from "./modalForm/Button"
-
-export const Navbar = () => {
- 
-    return (
-      
-      <header className='bg-black w-600  top-0 z-50'> 
-    <div className="flex justify-between p-2">
-    <div className="flex items-center ml-4 ">
-
-    <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
-   width="160"      
-   height="80"     
-   fill="#ffffff"   viewBox="0 0 300.000000 300.000000"
- preserveAspectRatio="xMidYMid meet" 
- >
-
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+ width="300.000000pt" height="300.000000pt" viewBox="0 0 300.000000 300.000000"
+ preserveAspectRatio="xMidYMid meet">
+<metadata>
+Created by potrace 1.10, written by Peter Selinger 2001-2011
+</metadata>
 <g transform="translate(0.000000,300.000000) scale(0.050000,-0.050000)"
-fill="#ffffff" stroke="none">
+fill="#000000" stroke="none">
 <path d="M787 5159 c-416 -74 -647 -329 -647 -710 0 -415 182 -580 793 -718
 425 -96 534 -162 590 -357 15 -53 65 -128 136 -204 61 -66 126 -142 143 -169
 l32 -50 27 80 c38 113 34 378 -8 503 -98 288 -285 408 -830 527 -404 88 -509
@@ -57,20 +47,3 @@ l32 -50 27 80 c38 113 34 378 -8 503 -98 288 -285 408 -830 527 -404 88 -509
 150 c0 181 6 180 -80 16z"/>
 </g>
 </svg>
-
-
-  
-</div>
-      <div className="flex items-center mr-3">
-       <ButtonForm/>
-        
-      </div>
-    </div>
-  </header>
-
-  
-
-  
-    )
-  }
-  

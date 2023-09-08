@@ -8,10 +8,10 @@ export async function connectDB(){
  
     if(conn.isConnected) return;
     const db =  await connect(process.env.MONGO_DB)
-console.log(db.connection.db.databaseName)
-conn.isConnected = db.connections[0].readyState
+    console.log(db.connection.db.databaseName)
+    conn.isConnected = db.connections[0].readyState
 
-}
+    }
 
 connection.on('connected', ()=>{
     console.log('Mongoose is connected')

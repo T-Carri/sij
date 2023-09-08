@@ -3,11 +3,10 @@ import { useState } from 'react'
 import DatePicker from 'react-rainbow-components/components/DateTimePicker'
 import {Formik, useFormik, Field, Form  } from 'formik';
 import { useRouter } from 'next/navigation'
-import * as Yup from 'yup';
-
-
-
- 
+import { postST } from '@/utils/actions/actions';
+import { useLoadingCallback } from "react-loading-hook";
+import { Button } from '@/ui/Button';
+ import { FormError } from '@/ui/FormError';
  
 
 interface FormValues {
@@ -20,6 +19,7 @@ interface FormValues {
   estado: string;
   ppto:string;
   peticioncancelacion:boolean;
+  finalizado:boolean
 }
 
 
@@ -101,6 +101,9 @@ if (buttonId=='activarpc') {
 }
 
 }
+
+
+
   
 
   const initialValues:FormValues= {
@@ -112,7 +115,8 @@ if (buttonId=='activarpc') {
     presupuestado:false,
     estado: "" ,
     ppto:"",
-    peticioncancelacion:false
+    peticioncancelacion:false,
+    finalizado:false
 
   }
 
@@ -125,10 +129,15 @@ if (buttonId=='activarpc') {
     values.presupuestado=Presupuesto
     values.estado= State
     values.ppto= inputValuePPTO
-    values.peticioncancelacion= Pcancelacion
-    setTimeout(() => {
+    values.peticioncancelacion= Pcancelacion 
+
+    postST(values).then((docGuardado)=>{console.log('ST PUBLICADO:', docGuardado)}) 
+    route.push('/')
+
+
+    /* setTimeout(() => {
     alert(JSON.stringify(values, null, 2));
-    }, 500);
+    }, 500); */
 
 //aqui vas a colocar la llamada al rever action que va a postear el st 
 //investiga y lee como hacer el post
@@ -136,6 +145,24 @@ if (buttonId=='activarpc') {
 
     };
 
+
+    const [handleSubmit, isFormLoanding, error]=  useLoadingCallback(
+    async (values: FormValues) => {
+     
+        values.presupuestado=Presupuesto
+        values.estado= State
+        values.ppto= inputValuePPTO
+        values.peticioncancelacion= Pcancelacion 
+    
+      await postST(values).then((docGuardado)=>{console.log('ST PUBLICADO:', docGuardado)}) 
+        route.push('/')
+    
+    
+        
+    
+    
+        }
+      )
 
 //Interruptor presupuestado false por defecto OK make effect at values
 //Si se cambia interruptor a true,  
@@ -150,7 +177,7 @@ if (buttonId=='activarpc') {
   return (
     
     <div className="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
-    <Formik initialValues={initialValues} onSubmit={onSubmit}>
+    <Formik initialValues={initialValues} onSubmit={handleSubmit}>
     <Form>
 
     <div className="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
@@ -431,7 +458,7 @@ formatStyle="large"
   className={`inline-block rounded-md ${Pcancelacion?'bg-white text-red-500 shadow-sm': 'text-gray-500 hover:text-gray-700'}  px-4 py-2 text-sm   focus:relative"`}
 >
   Activo
-</button>
+</button> 
 
 <button data-button-id='desactivarpc' onClick={changePcancelacion}
   className={`inline-block rounded-md  ${Pcancelacion?'text-gray-500 hover:text-gray-700': 'bg-white text-blue-500 shadow-sm'} px-4 py-2 text-sm   focus:relative`}
@@ -451,7 +478,17 @@ formatStyle="large"
       </div>
     </div>
     <div className="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
-      <button type="submit" className="inline-flex w-full justify-center rounded-md bg-green-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-green-500 sm:ml-3 sm:w-auto">Agregar</button>
+     
+     
+      {/* <button type="submit" className="inline-flex w-full justify-center rounded-md bg-green-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-green-500 sm:ml-3 sm:w-auto">Agregar</button> */}
+     
+ <Button type="submit" loading={isFormLoanding}
+            disabled={isFormLoanding} className="inline-flex w-full justify-center rounded-md bg-green-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-green-500 sm:ml-3 sm:w-auto">
+Agregar
+ </Button>
+ {error && <FormError>{error.message}</FormError>}
+     
+     
       <button type="button" onClick={()=>route.push('/')} className="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto">
        Cancelar
         </button>
