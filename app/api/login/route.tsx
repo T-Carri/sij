@@ -22,7 +22,7 @@ export async function POST(request: NextRequest, response: NextResponse) {
         name: "session",
         value: sessionCookie,
         maxAge: expiresIn,
-        httpOnly: true,
+        httpOnly: false,
         secure: true,
       };
 

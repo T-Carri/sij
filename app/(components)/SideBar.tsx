@@ -35,7 +35,7 @@ export const SideBar = ({name, email, foto}: SideBarProps) => {
     <ul className="mt-6 space-y-1">
       <li>
         <a
-          href=""
+         
           className="block rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700"
         >
           Inicio
@@ -70,7 +70,7 @@ export const SideBar = ({name, email, foto}: SideBarProps) => {
           <ul className="mt-2 space-y-1 px-4">
           <li>
               <a
-                href=""
+          
                 className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
               >
                 ST ACEPTADOS
@@ -78,7 +78,7 @@ export const SideBar = ({name, email, foto}: SideBarProps) => {
             </li>
             <li>
               <a
-                href=""
+            
                 className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
               >
                 ST CON PRESUPUESTO
@@ -87,7 +87,7 @@ export const SideBar = ({name, email, foto}: SideBarProps) => {
 
             <li>
               <a
-                href=""
+           
                 className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
               >
                 ST SIN PRESUPUESTO
@@ -95,7 +95,7 @@ export const SideBar = ({name, email, foto}: SideBarProps) => {
             </li>
             <li>
               <a
-                href=""
+                
                 className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
               >
                 ST VENCIDOS
@@ -104,7 +104,7 @@ export const SideBar = ({name, email, foto}: SideBarProps) => {
              
             <li>
               <a
-                href=""
+                
                 className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
               >
                 ST REALIZADOS
@@ -112,7 +112,7 @@ export const SideBar = ({name, email, foto}: SideBarProps) => {
             </li>
             <li>
               <a
-                href=""
+              
                 className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
               >
                 ST CANCELADOS
@@ -153,7 +153,7 @@ export const SideBar = ({name, email, foto}: SideBarProps) => {
           <ul className="mt-2 space-y-1 px-4">
           <li>
               <a
-                href=""
+               
                 className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
               >
                 REGION
@@ -161,7 +161,7 @@ export const SideBar = ({name, email, foto}: SideBarProps) => {
             </li>
             <li>
               <a
-                href=""
+              
                 className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
               >
                 FOLIO
@@ -200,7 +200,7 @@ export const SideBar = ({name, email, foto}: SideBarProps) => {
           <ul className="mt-2 space-y-1 px-4">
             <li>
               <a
-                href=""
+                
                 className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
               >
                 Details
