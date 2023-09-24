@@ -19,6 +19,7 @@
     "firebase": "^10.1.0",
     "firebase-admin": "^11.10.1",
     "formik": "^2.4.3",
+    "googleapis": "^126.0.1",
     "mongoose": "^7.4.5",
     "next": "13.4.13",
     "next-firebase-auth-edge": "^0.8.2",

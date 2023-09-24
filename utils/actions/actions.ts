@@ -41,3 +41,22 @@ try {
 
 
 }
+
+
+
+/* export async function resolucion(){
+
+//Aqui vamos a hacer lo siguiente 
+//voy a jalar los correos
+// buscare la bandera folio y hare una comparacion de folios
+//en la database, si encuentro un folio nuevo lo añadire
+//puedes intentar agregar los que estan cancelados
+//sera una logica que tendra un alcance de 20 correos hacia
+//abajo  y hasta este punto intenta sustraer un real
+//para que puedas identificar las banderas que a simple vista
+//parece que asi se ve un st cuando entra cancelado
+//de construnet [SIM]-ASIGNACION ST CANCELADA
+//CONECTALO
+
+
+} */

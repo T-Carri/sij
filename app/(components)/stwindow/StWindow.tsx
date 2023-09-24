@@ -1,19 +1,24 @@
 'use client'
-import React, {useEffect} from 'react'
+import React, {useEffect, useState} from 'react'
 import {  useParams } from "next/navigation";
 
 
 export default  function StWindow({ prop }: { prop: string }) {
 
   const params = useParams();
+  const [ST, setST] = useState(
+    {
+      title: "",
+      description: "",
+    }
+  )
 
 
 
 
-/* 
   useEffect(()=>{
 
-  }, []) */
+  }, []) 
 
 
   return (

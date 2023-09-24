@@ -34,7 +34,9 @@ export async function GET(request:NextRequest, {
 
 
 
-
+//For put data througt  the stwindow form  
+//maybe im going to use PUT method by the api of the router 
+//
 
 
 
