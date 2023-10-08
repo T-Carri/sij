@@ -5,6 +5,7 @@ import { connectDB } from "@/utils/db";
 import ST from "@/utils/models/st.models";
 import StCard from "@/app/(components)/stcard/StCard";
 import Link from 'next/link'
+import { AddSt } from "@/app/(components)/addSt/AddSt";
 
 type Props = {
     searchParams: Record<string, string> | null | undefined;
@@ -60,29 +61,57 @@ interface data{
          <ElementsDashboard/>
      
          <div className='flex-grow p-6'>
-         <div className="grid grid-cols-1 gap-4 lg:grid-cols-4 lg:gap-8">
-   
-   
-       {
-         informacion.map((st) => (
-       
-         <Link key={st._id} href={`/sts/${st._id}`}>
-   
-          
-     
-              <div className="h-32 rounded-lg bg-gray-100 h-auto" key={st._id}>
-           <StCard values={st} />
-            
-             </div>
-            
-         </Link>
-       
-       ))
-   }
-        
-   
-   </div>
-        </div>
+  <div className="grid grid-cols-1 gap-4 lg:grid-cols-1 lg:gap-8">
+    <div className="overflow-x-auto">
+      <table className="min-w-full divide-y-2 divide-gray-200 bg-white text-sm">
+        <thead className="ltr:text-left rtl:text-right">
+          <tr>
+            <th className="whitespace-nowrap px-2 py-2 font-medium text-gray-900">
+              Folio
+            </th>
+            <th className="whitespace-nowrap px-2 py-2 font-medium text-gray-900">
+              Tienda
+            </th>
+            <th className="whitespace-nowrap px-2 py-2 font-medium text-gray-900">
+              Trabajo
+            </th>
+            <th className="whitespace-nowrap px-2 py-2 font-medium text-gray-900">
+              Fecha
+            </th>
+            <th className="px-2 py-2"></th>
+          </tr>
+        </thead>
+        <tbody className="divide-y divide-gray-200">
+          {informacion.map((st, index) => (
+            <tr key={index}>
+              <td className="whitespace-nowrap px-2 py-2 font-medium text-gray-900">
+                {st.folio}
+              </td>
+              <td className="whitespace-nowrap px-2 py-2 text-gray-700">
+                {st.tienda}
+              </td>
+              <td className="whitespace-nowrap px-2 py-2 text-gray-700 scrolling-text">
+                <div className="scrolling-content">{st.trabajo}</div>
+              </td>
+              <td className="whitespace-nowrap px-2 py-2 text-gray-700">
+                {st.fecha}
+              </td>
+              <td className="whitespace-nowrap px-2 py-2">
+                <a
+                  href="#"
+                  className="inline-block rounded bg-indigo-600 px-2 py-2 text-xs font-medium text-white hover:bg-indigo-700"
+                >
+                  View
+                </a>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<AddSt/>
         </section>
    
    
@@ -95,6 +124,7 @@ interface data{
    }
    
    export default page
+
 
 
 

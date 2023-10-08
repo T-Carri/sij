@@ -2,3 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Definimos la animación "rotate" */
+@keyframes rotate {
+    0% {
+      transform: rotateY(90deg); /* Inicialmente, el texto está girado 90 grados */
+      opacity: 0; /* El texto está completamente transparente */
+    }
+    100% {
+      transform: rotateY(0deg); /* Al final de la animación, el texto no está girado */
+      opacity: 1; /* El texto está completamente visible */
+    }
+  }
+  
+  /* Aplicamos la animación a la clase "rotate-text" */
+  .rotate-text {
+    animation: rotate 1s ease-in-out; /* La animación dura 1 segundo */
+  }
+  
+  .scrolling-text {
+    max-width: 150px; /* Ajusta el ancho máximo según tus preferencias */
+    overflow: hidden;
+    white-space: nowrap;
+  }

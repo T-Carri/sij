@@ -15,10 +15,10 @@ export default function RootLayout(props: { children: React.ReactNode, modal: Re
   return (
     <html lang="en">
     <body className={inter.className}>
-
+     <ServerAuthProvider>
         {props.children}
         {props.modal}
-     
+     </ServerAuthProvider>
  
      
      </body>
