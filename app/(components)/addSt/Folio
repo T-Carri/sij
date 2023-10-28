@@ -1,0 +1,83 @@
+
+Folio ST: 41713549
+Edificio: 1317 - VALLE ESCONDIDO
+Gerente Solicitante: MARCO ANTONIO ESTRADA GUERRERO [GERENTE TITULAR]
+Gerente Contratante: GERMAN DARIO ESTRADA SALGADO [JEFE]
+Contratista Asignado: 41578 - MIGUEL GILBERTO JASSO MENDEZ [RFC: JAMM820818HDA]
+Region: 30015 - IXTAPALUCA
+Centro cargo: 131701 - IGLA 1317 MUE VALLE ESCONDIDO
+Fecha Solicitud: 22/AGO/2023
+ESTATUS: PENDIENTE
+DETALLE DEL PROBLEMA
+Área: OTROS - OTROS
+Referencia: OTROS
+Equipo:
+Problema Común: MEJORAS O ADECUACIONES
+Descripción del Problema:
+SE SOLICITA LA CORRECCION Y CAMBIO DE CABLES HDMI DAÑADOS UBICADOS EN EXHIBICION DE PANTALLAS.
+
+
+
+Folio:'',
+Edificio:'', 
+GerenteSolicitante:'', 
+GerenteContratante:'', 
+ContratistaAsignado:'',
+Region:'',
+CentroCargo:'',
+FechaSolicitud:'', 
+Estatus:'',
+Area:'',
+Referencia:'', 
+Equipo:'', 
+ProblemaComun:'',
+DescripcionProblema:''
+
+
+Folio ST: 6666
+Edificio: 666 - VALLE DARK
+Gerente Solicitante: LEONARDO DA VINCI [GERENTE TITULAR]
+Gerente Contratante: DANTE ALHERIGERI [JEFE]
+Contratista Asignado: 41666 - MIGUEL ANGEL [RFC: HELL6668R15]
+Region: 30666 - HELL
+
+Fecha Solicitud: 22/AGO/2023
+ESTATUS: PENDIENTE
+DETALLE DEL PROBLEMA
+Área: OTROS - OTROS
+Referencia: OTROS
+Equipo:
+Problema Común: MEJORAS O ADECUACIONES
+Descripción del Problema: 
+SE SOLICITA LA CORRECCION Y CAMBIO DE CABLES HDMI DAÑADOS UBICADOS EN EXHIBICION DE PANTALLAS.
+
+
+
+
+
+
+
+
+
+
+ x|
+
+CON VARIABLES  
+
+ muestra el nombre del empleado y ubicacion del departamento del [empleado]   
+
+
+
+ despliega dos campos de la tabla empleado 
+ y el numero de departamento y localizacion del departamento de todos los empleados 
+ incluyan esa lista 
+ los numeros de departamento y ubicacion de oficina que actulmente no tienen empleados 
+
+
+muestre la asociacion del nombre de empleado y nombre del jefe como con el header trabaja para jefe
+
+
+muestre 3 campos de la tabla empleado que su sueldo sea mayor a 3000 pero menor a 5000
+
+muestre el nombre y puesto de todos los empleados 
+con el mismo departamento que [colocar un nombre de empleado]

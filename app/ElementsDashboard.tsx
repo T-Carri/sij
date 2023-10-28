@@ -5,7 +5,7 @@
 import { useAuth } from '@/auth/context'
  const ElementsDashboard = () => {
     const { user } = useAuth();
-    console.log('Test:', user)
+  /*   console.log('Test:', user) */
    
    return (
      <>
